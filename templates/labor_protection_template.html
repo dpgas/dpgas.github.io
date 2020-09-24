@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Синельниківська дільниця АТ "Дніпропетровськгаз"</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <header class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="/index.html">Головна сторінка</a></li>
+                        <li><a href="regulatory_documents.html">Нормативні документи</a></li>
+                        <li><a href="orders.html">Накази, розпорядження</a></li>
+                        <li><a href="technical_documents.html">Виконавчо-технічна документація</a></li>
+                        <li><a href="technological_maps.html">Технологічні карти</a></li>
+                        <li><a href="work_instructions.html">Виробничі інструкції</a></li>
+                        <li><a href="route_maps.html">Маршрутні карти</a></li>
+                        <li><a href="labor_protection.html">Інструкції з охорони праці</a></li>
+                        <li><a href="fire_safety.html">Інструкції з пожежної безпеки</a></li>
+                        <li><a href="books.html">Довідкова та навчальна література</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="centered">
+        <div id="title">Інструкції з охорони праці</div>
+        <input type="search" id="listFilter" onkeyup="listFilter()" onsearch="listFilter()" placeholder="Пошук...">
+        <ul class="filteringList">[labor_protection_list]
+        </ul>
+    </main>
+    <footer id="footer">&copy; 2020 Синельниківська дільниця АТ&nbsp;"Дніпропетровськгаз"</footer>
+    <script>
+        const listFilter = () => {
+            let filter = document.querySelector('#listFilter').value.toUpperCase()
+            let liList = document.querySelectorAll('.filteringList > li')
+            liList.forEach(li => li.style.display = (li.textContent.toUpperCase().indexOf(filter) > -1) ? '' : 'none')
+        }
+    </script>
+</body>
+
+</html>

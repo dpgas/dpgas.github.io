@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Синельниківська дільниця АТ "Дніпропетровськгаз"</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <header class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="/index.html">Головна сторінка</a></li>
+                        <li><a href="regulatory_documents.html">Нормативні документи</a></li>
+                        <li><a href="orders.html">Накази, розпорядження</a></li>
+                        <li><a href="technical_documents.html">Виконавчо-технічна документація</a></li>
+                        <li><a href="technological_maps.html">Технологічні карти</a></li>
+                        <li><a href="work_instructions.html">Виробничі інструкції</a></li>
+                        <li><a href="route_maps.html">Маршрутні карти</a></li>
+                        <li><a href="labor_protection.html">Інструкції з охорони праці</a></li>
+                        <li><a href="fire_safety.html">Інструкції з пожежної безпеки</a></li>
+                        <li><a href="books.html">Довідкова та навчальна література</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="centered">
+        <div id="title">Довідкова література</div>
+        <input type="text" id="listFilter" onkeyup="listFilter()" placeholder="Пошук..." title="Type in a name">
+        <ul class="filteringList">
+<li><a href="https://drive.google.com/file/d/1u0WrLmE8wYHOxm_pZISvYy4V4I-quKrQ/view?usp=drivesdk" target="_blank">Єнін П.М., Шишко Г.Г., Предун К.М., Газопостачання населенних пунктів і об'єктів природним газом, 2002</a></li>
+<li><a href="https://drive.google.com/file/d/1_qJNTlTd3yXrIYAm4ScuAwc00Fa8JtOL/view?usp=drivesdk" target="_blank">Багдасаров В.А. Аварийная служба городского газового хозяйства, 1975</a></li>
+<li><a href="https://drive.google.com/file/d/1YbZVsZnFb0n8TwOkbxWUDS12EfUdgfBU/view?usp=drivesdk" target="_blank">Мелькумов В.Н. и др., Проектирование городских и поселковых распределительных систем газоснабжения, 2015</a></li>
+<li><a href="https://drive.google.com/file/d/1k97y3LnzJLLE0k6VD5C8j8A_DLBZEc_V/view?usp=drivesdk" target="_blank">План розвитку ТОВ Оператор ГТС України на 2020-2029рр</a></li>
+<li><a href="https://drive.google.com/file/d/14W9bn_epZcG0ELWsxmXAoLFBFR8EgndX/view?usp=drivesdk" target="_blank">Самойленко М.І., Сенчук Т.С., Інформаційні технології в розвитку трубопровідних транспортних систем, 2010</a></li>
+<li><a href="https://drive.google.com/file/d/1NOHoi7qgoqkOMt-rLkP1kpP1O2_K2rmU/view?usp=drivesdk" target="_blank">Слатова О.М., Міські інженерні мережі, 2012</a></li>
+<li><a href="https://drive.google.com/file/d/1HHjSD-8OQY09eALinDVviFTXN_x-2Quw/view?usp=drivesdk" target="_blank">Сідак В.С. , Слатова О.М. Спецкурс з газопостачання, 2010</a></li>
+<li><a href="https://drive.google.com/file/d/1ud8JHlem61o8Zunza0B_h0sNEPt0fz05/view?usp=drivesdk" target="_blank">Сідак В.С. , Слатова О.М. Спецкурс з організації газопостачання, 2010</a></li>
+<li><a href="https://drive.google.com/file/d/1MfXsem8PvJiVt767BydlQr21ZIYF8wKB/view?usp=drivesdk" target="_blank">Сідак В.С., Інноваційні технології в діагностиці та експлуатації систем газопостачання, 2005</a></li>
+<li><a href="https://drive.google.com/file/d/1KfcXryE3FyqGEvwb8x9xWEW6x9CiElqq/view?usp=drivesdk" target="_blank">Сідак В.С., Супонєв В.М., Броневський Ю.Ф., Сучасні та інноваційні технології в безпеці газопостачання, 2015</a></li>
+<li><a href="https://drive.google.com/file/d/1lSceP6N4Fc9dAJi2b7lUTPZlgzzFQOGO/view?usp=drivesdk" target="_blank">Шульга М.О. Алексахін О.О. Шушляков Д.О., Теплогазопостачання та вентиляція, 2014</a></li>
+<li><a href="https://drive.google.com/file/d/1U5x3f2jfQz1pcShZaiq2W4zIirrPml6a/view?usp=drivesdk" target="_blank">Шур А.В. Газорегуляторные установки, 1985</a></li>
+        </ul>
+    </main>
+    <input type="search" id="listFilter" onkeyup="listFilter()" onsearch="listFilter()" placeholder="Пошук...">
+    <script>
+        const listFilter = () => {
+            let filter = document.querySelector('#listFilter').value.toUpperCase()
+            let liList = document.querySelectorAll('.filteringList > li')
+            liList.forEach(li => li.style.display = (li.textContent.toUpperCase().indexOf(filter) > -1) ? '' : 'none')
+        }
+    </script>
+</body>
+
+</html>
