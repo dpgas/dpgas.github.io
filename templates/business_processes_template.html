@@ -35,21 +35,13 @@
         </div>
     </header>
     <main class="centered">
-        <div id="title">Нормативні документи</div>
+        <div id="title">Бізнес-процеси</div>
         <input type="search" id="listFilter" onkeyup="listFilter()" onsearch="listFilter()" placeholder="Пошук...">
-        <ul class="filteringList">[regulatory_documents_list]
+        <ul class="filteringList">[business_processes_list]
         </ul>
-
     </main>
     <footer id="footer">&copy; 2021р. РГК&nbsp;Дніпропетровськгаз</footer>
     <script>
-        let toggler = document.querySelectorAll(".rootTree")
-        toggler.forEach(item => {
-            item.addEventListener("click", () => {
-                item.parentElement.querySelector(".children").classList.toggle("active")
-                item.classList.toggle("rootTree-down")
-            })
-        })
         const listFilter = () => {
             let filter = document.querySelector('#listFilter').value.toUpperCase()
             let liList = document.querySelectorAll('.filteringList > li')
